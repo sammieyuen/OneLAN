@@ -1,46 +1,574 @@
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <title>My Page with Iframe</title>
-        </head>
-        <body>
-            <!--<h1>Test Page</h1>-->
-            <!--<iframe width="1500" height="780" src="https://www.youtube.com/embed/aMETM5GWg_g?si=Uq8WOLw9x8JNGeH4&autoplay=1&mute=1&loop=1&playlist=aMETM5GWg_g" allow='autoplay' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>-->
-            <!--<iframe width="1500" height="780" src="https://www.youtube.com/embed/hTm79tprS6A?si=TVqa6AM2rT4pRj9z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>-->
-            <!--<iframe width="1500" height="780" src="https://www.youtube.com/embed/64to6HJPAO0?autoplay=1&mute=1&loop=1&playlist=64to6HJPAO0" allow='autoplay' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>-->
-            <!--<iframe width="1500" height="780" src="https://www.youtube.com/embed/aMETM5GWg_g?autoplay=1&mute=1&loop=1&playlist=aMETM5GWg_g" allow='autoplay' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    -->
-            <!--<iframe width="1500" height="780" src="https://www.youtube.com/embed/kEUmqPO68Zk?autoplay=1&mute=1&loop=1&playlist=kEUmqPO68Zk,NARZ1MUJL64,qOX7v1s36P8,FaeoiaMixNA,yQ_U7CMSgQ8" allow='autoplay' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>     -->
-             <!--<iframe width="1500" height="780" src="https://www.youtube.com/embed/ojDbpgZgWiQ?autoplay=1&mute=1&loop=1&playlist=ojDbpgZgWiQ" allow='autoplay' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>     -->
-             <iframe id="singleview" src="https://app2.rthk.hk/special/nationalgames/player/singleplayer.php?backendUrl=https://lb.mediatech-ssc.net&channelId=rthk_nationalgame1_ci_9d3a0f4b-4e8b-48fe-b3f6-a2dfb4b52f1e"></iframe>
-            <!--<p>National Games 2025</p>-->
-        </body>
-
-        </html>
 
 
 
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-hk" lang="zh-hk">
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<!-- webtrends meta tags-->
+<meta name="WT.cg_n" content="#special:nationalgame2025" />
+<meta name="WT.cg_s" content="webcast" />
+<meta class="elastic" name="media_type" content="other" />
+<meta class="elastic" name="thumbnail" content="" />
+<meta class="elastic" name="date" content="">
+<title>網上直播 | 第十五屆全國運動會 | 香港電台</title>
+
+<meta name="description"  content="" />
+<link rel="canonical" href="https://app2.rthk.hk/special/nationalgames/webcast.php" />
+
+<!-- facebook sharing info //-->
+<meta property="og:title" content="香港電台網站：第十五屆全國運動會和第十二屆殘運會暨第九屆特奧會" />
+<meta property="og:description" content="四年一度的中華人民共和國運動會（全運會）於2025年11月9日至21日在廣東、香港和澳門舉行。全運會乃國家水平最高、規模最大的全國性大型綜合運動會。全國各地的頂尖運動員將會雲集粵港澳三地，參與這項體壇盛事！ 第十五屆全國運動會（十五運會）分別有34項競賽及23項群眾賽事。香港將會承辦8個競賽項目，以及一個群眾賽事活動項目。 第十二屆殘運會暨第九屆特奧會（殘特奧會）於2025年12月8日至15日舉行，設有四個類別，分別供肢體傷殘人士、智障人士、失明人士和失聰人士參與。
+"/>
+<meta property="og:image" content="https://app2.rthk.hk/special/nationalgames/images/facebook.jpg" />
+<!-- end of facebook sharing info //-->
+
+
+<!-- Bootstrap 5 -->
+<link href="vendor/bootstrap5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="vendor/bootstrap5/js/bootstrap.bundle.min.js"></script>
+
+<!-- jQuery -->
+<script src="vendor/jquery/jquery-3.7.1.min.js"></script>
+
+<!-- Fancybox 3 //-->
+<link rel="stylesheet" href="vendor/fancybox3/jquery.fancybox.custom.css?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="vendor/fancybox3/jquery.fancybox.min.js?v=2.1.5"></script>
+<!-- End of Fancybox 3 //-->
+
+<!-- stick slider -->
+<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme-inside-btn.css"/>
+<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
 
 
 
+<!-- Animated CSS transition //-->
+<link rel="stylesheet" href="css/animate.min.css">
+<script src="js/scrolla.jquery.min.js"></script>
+
+<!-- Custom CSS //-->
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="vendor/sharing/css/sharing.css" rel="stylesheet" type="text/css" />
+
+<!-- Sharing JavaScript -->
+<script src="vendor/sharing/js/sharing.js"></script>
+
+<script src="js/affix.js"></script>
+
+<!-- Custom Common JavaScript -->
+<script src="js/common.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#nav-webcast').addClass("active");
+});
+</script>
+<style>
+.video-box {
+
+}
+.video-box .player {
+	transform: translateY(0);
+	background-color: #08222d;
+	border-radius: 15px;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+	margin:0;
+	padding: 1%;
+}
+/*
+.video-box .player iframe {
+	width: 100%;
+	aspect-ratio: 8 / 9; 
+}
+@media only screen and (max-width: 992px) {
+	.video-box .player iframe { aspect-ratio: 8 / 10; }
+}
+@media only screen and (max-width: 767px) {
+	.video-box .player iframe { aspect-ratio: 8 / 14; }
+}
+@media only screen and (max-width: 576px) {
+	.video-box .player iframe { aspect-ratio: 8 / 23; }
+}
+*/
+.signalInfoBox {
+	border-radius: 15px;
+	box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+	background-color: white;
+	padding: 20px;
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+}
+.signalInfoBox .signal-label {
+	color: #381d9e;
+	font-weight: bold;
+	display: inline;
+}
+</style>
+<style>
+div#myMenu {
+	display: inline-flex;
+}
+div,a { box-sizing: border-box; }
+div.channelButton {
+	position: relative;
+	cursor: pointer;
+	block-size: fit-content;
+	text-align: center;
+	width: 100%;
+	margin: 10px;
+}
+img.channelThumbnail {
+	display: block;
+	width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    background: black;
+    overflow: hidden;
+	position: relative;
+    z-index: 0;
+	border: solid 2px transparent;
+	transition: all .1s ease;
+}
+.channelThumbnail:hover {
+	border: solid 2px white;
+}
+.channelButton:before {
+	display: block;
+	position: absolute;
+	content: '';
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	background: url('images/icon_play_btn.svg') center center no-repeat;
+	background-size: 20% auto;
+	z-index: 10;
+	transition: all .3s ease;
+	pointer-events: none;
+	top: 0;
+    left: 0;
+}
+span.channelTitle {
+	font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	color: white;
+	margin-top: .5em;
+	display: block;
+	text-align: center;
+}
+iframe#singleview {
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	overflow: hidden;
+	box-sizing: border-box;
+	border: 0;
+	border-radius: 8px;
+}
+#playerWrapper {
+
+}
+#buttonsMenu {
+	width: calc(100% + 16px);
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+#myMenu { width: 20%; }
+
+@media only screen and (max-width: 992px) {
+	#myMenu { width: 25%; }
+}
+@media only screen and (max-width: 768px) {
+	#myMenu { width: 33.3%; }
+}
+@media only screen and (max-width: 576px) {
+	#myMenu { width: 50%; }
+}
+</style>
+</head>
+
+<body class="article">
+
+<a id="top"></a>
+
+<!-- Header -->
+<header> 
+
+<section id="home-sect-logo">
+
+	<div id="composite-logo"><a href="https://rthk.hk/" target="_blank" title="第十五屆全國運動會 | 香港電台"><img src="images/composite_logo.svg" alt="第十五屆全國運動會 | 香港電台" class="img-responsive"></a></div>
+	
+	<div class="project-logo d-flex align-items-center justify-content-center">
+		<a href="index.php" class="cover-box">
+			<h1 class="d-none d-lg-block"><img src="images/project_logo_slogan.png" class="img-responsive" alt="2025 全國運動會 全城見證 全運一拼 香港電台 全程同步" /></h1>
+			<h1 class="d-block d-lg-none"><img src="images/project_logo_m_slogan_h.png" class="img-responsive" alt="2025 全國運動會 全城見證 全運一拼 香港電台 全程同步" /></h1>
+			<!--
+			<h1 class="d-none d-lg-block"><img src="images/project_logo.png" class="img-responsive" alt="2025 全國運動會 全城見證 全運一拼 香港電台 全程同步" /></h1>
+			<h1 class="d-block d-lg-none"><img src="images/project_logo_m.png" class="img-responsive" alt="2025 全國運動會 全城見證 全運一拼 香港電台 全程同步" /></h1>
+			//-->
+		</a>
+	</div>
+	<div id="op-counter" style="height:initial">
+		<div class="counter-box">
+			<div class="c-label">距離全運會開幕尚有</div>
+			<div class="c-countGrp">
+				<div class="c-day">5</div>
+				<div class="c-date">日</div>
+			</div>
+		</div>
+		<!--<a href="webcast.php" style="border-radius:10px;" class="btn w-100">收看10條直播頻道</a>//-->
+	</div>
+	
+	<div id="two-games">
+		<div class="d-none d-md-block"><img src="images/period_desktop.svg" class="img-responsive" alt="十五運會 殘特奧會" /></div>
+		<div class="d-block d-md-none"><img src="images/period_mobile.svg" class="img-responsive" alt="十五運會 殘特奧會" /></div>
+	</div>
+	
+</section>
+<!-- Section -->
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg">
+	
+  <a class="navbar-brand" href="https://app2.rthk.hk/special/nationalgames/index.php" title="主頁">第十五屆全國運動會</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item" id="nav-home">
+        <a class="nav-link" href="index.php" title="主頁">主頁 <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item" id="nav-article">
+        <a class="nav-link" href="article_list.php?c=1">全運會焦點</a>
+      </li>
+      <li class="nav-item" id="nav-video">
+        <a class="nav-link" href="video_list.php?c=1">全運會精彩片段</a>
+      </li>
+<!--
+      <li class="nav-item" id="nav-video-para">
+        <a class="nav-link" href="video_list.htm">殘特奧會精彩片段</a>
+      </li>
+
+      <li class="nav-item" id="nav-feed">
+        <a class="nav-link" href="feed.php">最新動態</a>
+      </li>
+-->
+      <li class="nav-item" id="nav-schedule">
+        <a class="nav-link" href="schedule.php">全運日程</a>
+      </li>
+      <li class="nav-item" id="nav-webcast">
+        <a class="nav-link" href="webcast.php">網上直播</a>
+      </li>
+      <li class="nav-item" id="nav-related-progs">
+        <a class="nav-link" href="related.php">相關節目</a>
+      </li>
+      <li class="nav-item" id="nav-instantnews">
+        <a class="nav-link" href="https://app2.rthk.hk/special/nationalgames/index.php#sect-instantnews">相關新聞</a>
+      </li>
+	  <!--
+      <li class="nav-item" id="nav-sticker">
+        <a class="nav-link" href="index.php#sect-whatsticker">打氣區</a>
+      </li>
+	  //-->
+      <li class="nav-item" id="nav-related-progs">
+	  <a class="nav-link" href="https://app2.rthk.hk/special/nationalgames/index.php#sect-rthksports" target="_new">體港台</a>
+      </li>
+	  <!--
+      <li class="nav-item" id="nav-schedule">
+        <a class="nav-link" href="#sect-schedule">焦點賽程</a>
+      </li>
+	  
+      <li class="nav-item" id="nav-medal">
+        <a class="nav-link" href="#sect-medal">獎牌榜</a>
+      </li>
+	  //-->
+      <li class="nav-item" id="nav-article-para">
+        <a class="nav-link" href="article_list.php?c=2">殘特奧會焦點</a>
+      </li>
+	  
+    </ul>
+  </div><!--/.navbar-collapse -->
+</nav>
+<!-- Navigation -->
+
+<div class="container-fluid"></div>
+
+</header><!--header-->
+
+<main class="position-relative">
+
+<section class="sect-player">
+	<div class="text-center text-md-left py-4">
+			<div class="sect-title text-white"><h2>大會訊號網上直播</h2></div>
+	</div>
+	<div class="video-box">
+		<div class="player">
+		
+			<div class="playerWrapper">
+				<iframe id="singleview" src="https://app2.rthk.hk/special/nationalgames/player/singleplayer.php?backendUrl=https://lb.mediatech-ssc.net&channelId=rthk_nationalgame1_ci_9d3a0f4b-4e8b-48fe-b3f6-a2dfb4b52f1e"></iframe>
+				<div id="buttonsMenu"></div>
+			</div>
+
+<script>
+var w = window.innerWidth;
+//var h = w * 9 / 16;
+var singleview = document.querySelector('#singleview');
+singleview.setAttribute('width', w);
+//singleview.setAttribute('height', h);
+
+function changeChannel(channelId) {
+	singleview.src = "https://app2.rthk.hk/special/nationalgames/player/singleplayer.php?backendUrl=https://lb.mediatech-ssc.net&channelId=" + channelId + "&play=true";
+}
+
+function updateThumbnails_v3() {
+	for(var i = 0; i < myList.length; i++) {
+		channelId = myList[i];
+		if (myThumbnailsURL[myList[i]] != "") {
+			//console.log(myThumbnailsURL[myList[i]]);
+			document.querySelector('#' + myList[i]).setAttribute('src', myThumbnailsURL[myList[i]] + '?' +  + new Date().getTime());
+		}
+	}
+}
 
 
+var channelId;
+var errorCount = 0;
+var xhttp = new XMLHttpRequest();
+xhttp.timeout = 20000;
+
+var myList = ["rthk_nationalgame1_ci_9d3a0f4b-4e8b-48fe-b3f6-a2dfb4b52f1e", 
+		"rthk_nationalgame2_ci_b01c71e9-e30e-404f-9b3b-4a1b9268d3ac", 
+		"rthk_nationalgame3_ci_88294498-a374-46bc-bf80-beb2b287eed4", 
+		"rthk_nationalgame4_ci_ea010f07-2d82-443c-8721-a924954c7455", 
+		"rthk_nationalgame5_ci_e4d81d39-61c2-46d5-a727-2e337577022b", 
+		"rthk_nationalgame6_ci_ab62a0aa-695d-4f0d-b118-472c7765686e", 
+		"rthk_nationalgame7_ci_acaeeadf-4f77-48f5-bdaf-a680c707c46b", 
+		"rthk_nationalgame8_ci_09b09fcd-1bcc-429b-8edf-5f77311e7eb7", 
+		"rthk_nationalgame9_ci_c432d91b-be23-4789-8637-8ad55d434ac7", 
+		"rthk_nationalgame10_ci_5025474c-3727-42c6-ad55-803441db037a"]; 
+		//"rthk_nationalgamemultiview_ci_19903b45-73bc-4315-aff5-8dd43fc9d153"];
+
+var myThumbnails = {"rthk_nationalgame1_ci_9d3a0f4b-4e8b-48fe-b3f6-a2dfb4b52f1e": "", 
+		"rthk_nationalgame2_ci_b01c71e9-e30e-404f-9b3b-4a1b9268d3ac": "", 
+		"rthk_nationalgame3_ci_88294498-a374-46bc-bf80-beb2b287eed4": "", "rthk_nationalgame4_ci_ea010f07-2d82-443c-8721-a924954c7455": "", "rthk_nationalgame5_ci_e4d81d39-61c2-46d5-a727-2e337577022b": "", "rthk_nationalgame6_ci_ab62a0aa-695d-4f0d-b118-472c7765686e": "", "rthk_nationalgame7_ci_acaeeadf-4f77-48f5-bdaf-a680c707c46b": "", "rthk_nationalgame8_ci_09b09fcd-1bcc-429b-8edf-5f77311e7eb7": "", "rthk_nationalgame9_ci_c432d91b-be23-4789-8637-8ad55d434ac7": "", "rthk_nationalgame10_ci_5025474c-3727-42c6-ad55-803441db037a": ""}; 
+		//"rthk_nationalgamemultiview_ci_19903b45-73bc-4315-aff5-8dd43fc9d153": ""};
+
+var myThumbnailsURL = {
+	"rthk_nationalgame1_ci_9d3a0f4b-4e8b-48fe-b3f6-a2dfb4b52f1e": "https://lb.mediatech-ssc.net/api/thumbnail?channelId=rthk_nationalgame1_ci_9d3a0f4b-4e8b-48fe-b3f6-a2dfb4b52f1e&auth.token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFubmVsSWQiOiJydGhrX25hdGlvbmFsZ2FtZTFfY2lfOWQzYTBmNGItNGU4Yi00OGZlLWIzZjYtYTJkZmI0YjUyZjFlIiwiZXhwIjoxNzY0ODIyODE5fQ.DKsip2N1to3rTqR29XiZO3s9U1cA_YRQDl-7IXbbu9M&auth.type=jwt",
+	"rthk_nationalgame2_ci_b01c71e9-e30e-404f-9b3b-4a1b9268d3ac": "https://lb.mediatech-ssc.net/api/thumbnail?channelId=rthk_nationalgame2_ci_b01c71e9-e30e-404f-9b3b-4a1b9268d3ac&auth.token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFubmVsSWQiOiJydGhrX25hdGlvbmFsZ2FtZTJfY2lfYjAxYzcxZTktZTMwZS00MDRmLTliM2ItNGExYjkyNjhkM2FjIiwiZXhwIjoxNzY0ODIyODc5fQ.W_bslEd3Szogw5Vtq1WBg81LtP9GjS52PgGG1L4qT6Y&auth.type=jwt",
+	"rthk_nationalgame3_ci_88294498-a374-46bc-bf80-beb2b287eed4": "https://lb.mediatech-ssc.net/api/thumbnail?channelId=rthk_nationalgame3_ci_88294498-a374-46bc-bf80-beb2b287eed4&auth.token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFubmVsSWQiOiJydGhrX25hdGlvbmFsZ2FtZTNfY2lfODgyOTQ0OTgtYTM3NC00NmJjLWJmODAtYmViMmIyODdlZWQ0IiwiZXhwIjoxNzY0ODIyOTAzfQ.kq4dzmZXXjzlmjTURvaWF9S3zqEZSP4cPlJ1PE3UIAE&auth.type=jwt",
+	"rthk_nationalgame4_ci_ea010f07-2d82-443c-8721-a924954c7455": "https://lb.mediatech-ssc.net/api/thumbnail?channelId=rthk_nationalgame4_ci_ea010f07-2d82-443c-8721-a924954c7455&auth.token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFubmVsSWQiOiJydGhrX25hdGlvbmFsZ2FtZTRfY2lfZWEwMTBmMDctMmQ4Mi00NDNjLTg3MjEtYTkyNDk1NGM3NDU1IiwiZXhwIjoxNzY0ODIyOTI1fQ.6HKxJ0BHkURCeWKN-qp4MQY3QFaeaWOoXSjwTQLegjg&auth.type=jwt",
+	"rthk_nationalgame5_ci_e4d81d39-61c2-46d5-a727-2e337577022b": "https://lb.mediatech-ssc.net/api/thumbnail?channelId=rthk_nationalgame5_ci_e4d81d39-61c2-46d5-a727-2e337577022b&auth.token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFubmVsSWQiOiJydGhrX25hdGlvbmFsZ2FtZTVfY2lfZTRkODFkMzktNjFjMi00NmQ1LWE3MjctMmUzMzc1NzcwMjJiIiwiZXhwIjoxNzY0ODIyOTQ2fQ.ojs5purrvob4olxYdIY-IT2gQT8b_2bYneqYH-cAfQw&auth.type=jwt",
+	"rthk_nationalgame6_ci_ab62a0aa-695d-4f0d-b118-472c7765686e": "https://lb.mediatech-ssc.net/api/thumbnail?channelId=rthk_nationalgame6_ci_ab62a0aa-695d-4f0d-b118-472c7765686e&auth.token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFubmVsSWQiOiJydGhrX25hdGlvbmFsZ2FtZTZfY2lfYWI2MmEwYWEtNjk1ZC00ZjBkLWIxMTgtNDcyYzc3NjU2ODZlIiwiZXhwIjoxNzY0ODIyOTY0fQ.VKzDFaRHe5PT8UzZZL6ATswpW9-Q1TTyot4yQQeeub0&auth.type=jwt",
+	"rthk_nationalgame7_ci_acaeeadf-4f77-48f5-bdaf-a680c707c46b": "https://lb.mediatech-ssc.net/api/thumbnail?channelId=rthk_nationalgame7_ci_acaeeadf-4f77-48f5-bdaf-a680c707c46b&auth.token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFubmVsSWQiOiJydGhrX25hdGlvbmFsZ2FtZTdfY2lfYWNhZWVhZGYtNGY3Ny00OGY1LWJkYWYtYTY4MGM3MDdjNDZiIiwiZXhwIjoxNzY0ODIyOTg2fQ.6KLOK5K99kNhuvK8hwS7gVk4bNP-4ZnIxp_CO5tpYeI&auth.type=jwt",
+	"rthk_nationalgame8_ci_09b09fcd-1bcc-429b-8edf-5f77311e7eb7": "https://lb.mediatech-ssc.net/api/thumbnail?channelId=rthk_nationalgame8_ci_09b09fcd-1bcc-429b-8edf-5f77311e7eb7&auth.token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFubmVsSWQiOiJydGhrX25hdGlvbmFsZ2FtZThfY2lfMDliMDlmY2QtMWJjYy00MjliLThlZGYtNWY3NzMxMWU3ZWI3IiwiZXhwIjoxNzY0ODIzMDA2fQ.GQ0WyVa6q5SQfZSnzavbjZe7vURrcFaYxwlBNskUJog&auth.type=jwt",
+	"rthk_nationalgame9_ci_c432d91b-be23-4789-8637-8ad55d434ac7": "https://lb.mediatech-ssc.net/api/thumbnail?channelId=rthk_nationalgame9_ci_c432d91b-be23-4789-8637-8ad55d434ac7&auth.token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFubmVsSWQiOiJydGhrX25hdGlvbmFsZ2FtZTlfY2lfYzQzMmQ5MWItYmUyMy00Nzg5LTg2MzctOGFkNTVkNDM0YWM3IiwiZXhwIjoxNzY0ODIyNzE4fQ.p5GwsDkyaJ7-gDPm2tz-syyOKNv0epEKoPHKaT8zCuM&auth.type=jwt",
+	"rthk_nationalgame10_ci_5025474c-3727-42c6-ad55-803441db037a": "https://lb.mediatech-ssc.net/api/thumbnail?channelId=rthk_nationalgame10_ci_5025474c-3727-42c6-ad55-803441db037a&auth.token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFubmVsSWQiOiJydGhrX25hdGlvbmFsZ2FtZTEwX2NpXzUwMjU0NzRjLTM3MjctNDJjNi1hZDU1LTgwMzQ0MWRiMDM3YSIsImV4cCI6MTc2NDgyMjY4OX0.R9Tu-f4YEZ45IL2WLYsntRwGHafcX8jjwrBHysfPGRM&auth.type=jwt"
+}; 
+	//"rthk_nationalgamemultiview_ci_19903b45-73bc-4315-aff5-8dd43fc9d153": ""};
+
+var buttonsMenu = document.querySelector('#buttonsMenu');
+var buttonsContent = '';
+for(var i = 0; i < myList.length; i++) {
+	if(i < 10)
+		buttonsContent += '<div id="myMenu"><div class="channelButton"><img class="channelThumbnail" id="' + myList[i] + '" onclick="changeChannel(\'' + myList[i] + '\')" src="" /><span class="channelTitle">全運 ' + (i+1) + '</span></div></div>';
+	/*else
+		buttonsContent += '<div id="myMenu"><div class="channelButton"><img class="channelThumbnail" id="' + myList[i] + '" onclick="changeChannel(\'' + myList[i] + '\')" src="" /><span class="channelTitle">multiview</span></div></div>';
+		*/
+	if(i < myList.length - 1)
+		buttonsContent += '';
+}
+buttonsMenu.innerHTML = buttonsContent;
+window.addEventListener("resize", () => {
+	var w = window.innerWidth;
+	var h = w * 9 / 16;
+	var singleview = document.querySelector('#singleview');
+	var myMenu = document.querySelector('#myMenu');
+	//singleview.setAttribute('width', w);
+	//singleview.setAttribute('height', h);
+});
+
+updateThumbnails_v3();
+setInterval(updateThumbnails_v3, 60000);
+</script>
+
+		</div>
+	<div class="remarks text-white opacity-75 py-1">*訊號由大會提供，只可以在香港播放。</div>
+
+<!--
+	<div class="signalInfoBox">
+			<div class="row">
+				<div class="col-12 col-md-6"><div class="signal-label">全運 1</div> </div>
+				<div class="col-12 col-md-6"><div class="signal-label">全運 2</div> </div>
+				<div class="col-12 col-md-6"><div class="signal-label">全運 3</div> </div>
+				<div class="col-12 col-md-6"><div class="signal-label">全運 4</div> </div>
+				<div class="col-12 col-md-6"><div class="signal-label">全運 5</div> </div>
+				<div class="col-12 col-md-6"><div class="signal-label">全運 6</div> </div>
+				<div class="col-12 col-md-6"><div class="signal-label">全運 7</div> </div>
+				<div class="col-12 col-md-6"><div class="signal-label">全運 8</div> </div>
+				<div class="col-12 col-md-6"><div class="signal-label">全運 9</div> </div>
+				<div class="col-12 col-md-6"><div class="signal-label">全運 10</div> </div>
+			</div>
+	<div class="remarks text-grey lh-base opacity-75 pt-2">*現顯示賽程時間為 2025-11-04 2:49pm 的資訊，賽程可能隨時更改，以大會公布為準，詳細時間表請參閱官方網站。</div>
+	</div>
+
+	<br />
+	<br />
 
 
+				<div class="text-center">
+					<a class="btn btn-red icon-arrow-r" target="_newswin" href="https://rthk.hk/tv/dtt31/">港台電視 31</a>
+					<a class="btn btn-red icon-arrow-r" target="_newswin" href="https://rthk.hk/tv/dtt32/">港台電視 32</a>
+					<a class="btn btn-red icon-arrow-r" target="_newswin" href="https://rthk.hk/tv/dtt36/">港台電視 36</a>
+				</div>
+-->
+		<br />
+		<div class="text-center">
+			<a class="btn btn-red pb-3" target="_newswin" href="https://rthk.hk/tv/dtt31/"><img src="images/ch_tv31.png" class="mb-2" width="150" alt="港台電視 31" title="港台電視 31" /><br>港台電視 31 <img src="https://webstatic.rthk.hk/img/btn_play.png" width="25" align="absmiddle" /></a>
+			<a class="btn btn-red pb-3" target="_newswin" href="https://rthk.hk/tv/dtt32/"><img src="images/ch_tv32.png" class="mb-2" width="150" alt="港台電視 32" title="港台電視 32" /><br>港台電視 32 <img src="https://webstatic.rthk.hk/img/btn_play.png" width="25" align="absmiddle" /></a>
+			<!--<a class="btn btn-red pb-3" target="_newswin" href="https://rthk.hk/tv/dtt36/"><img src="images/ch_tv36.png" class="mb-2" width="150" alt="港台電視 36" title="港台電視 36" /><br>港台電視 36 <img src="https://webstatic.rthk.hk/img/btn_play.png" width="25" align="absmiddle" /></a>//-->
+		</div>
+		<br />
+		<br />
+
+	</div>
+</section>
+
+</main>
+
+<a href="#" class="back-to-top">回頁頂</a>
+
+<!-- Footer -->
+<footer>© 2025 rthk.hk</footer>
+
+<!-- Share Bar -->
+<div id="shareBlock">
+	<div id="shadowBlock"></div>
+	<a rel="nofollow" title="facebook" onclick="fbs_click();">
+	<div class="shareIcon dark"><img class="share" src="vendor/sharing/img/shareIcon_face.svg" alt="facebook"></div>
+	</a>
+	<a rel="nofollow" title="twitter"  onclick="twitter_click();">
+	<div class="shareIcon"><img class="share" src="vendor/sharing/img/shareIcon_twi.svg" alt="twitter"></div>
+	</a>
+	<a rel="nofollow" title="以 WhatsApp 分享本頁" onclick="whatsapp_click()">
+	<div class="shareIcon dark trd"><img class="share" src="vendor/sharing/img/shareIcon_whAp.svg" alt="以 WhatsApp 分享本頁"></div>
+	</a>
+   <a rel="nofollow" title="複製連結" onclick="hyperlink_click()">
+      <div class="shareIcon dark"><img class="share" src="vendor/sharing/img/shareIcon_link.svg" alt="複製連結"></div>
+   </a>
+</div>
 
 
+<!-- JWplayer 8 -->
+<script type="text/javascript" src="../../jwplayer/v8246/jwplayer.js"></script>
+
+<!-- JWplayerKey -->
+<script>jwplayer.key="3d7xdNlRhUoP3B1m689K9SkDe6I/H3PVZv/bTHvnOtw="</script>
+
+<script type="text/javascript">
+
+/* EMBEDDED PLAYER */
+function createPlayer(placeholder, coverImage, streamUrl, videoCaption)
+{
+	jwplayer(placeholder).setup
+	({
+		sources:
+			[
+				{file: streamUrl }
+			],
+		width:'100%',
+		aspectratio: '16:9',
+		//plugins: { 'sharing-3': {} },		
+		image: coverImage,
+		autostart: false,
+		primary: 'html5',
+		hlshtml: true,
+		"intl": {
+		    "zh-hk": {
+airplay:"AirPlay",audioTracks:"Audio Tracks",auto:"Auto",buffer:"Loading",cast:"Chromecast",cc:"Closed Captions",close:"Close",errors:{badConnection:"This video cannot be played because of a problem with your internet connection.",cantLoadPlayer:"Sorry, the video player failed to load.",cantPlayInBrowser:"The video cannot be played in this browser.",cantPlayVideo:"This video file cannot be played.",errorCode:"Error Code",liveStreamDown:"The live stream is either down or has ended.",protectedContent:"There was a problem providing access to protected content.",technicalError:"This video cannot be played because of a technical error."},exitFullscreen:"Exit Fullscreen",fullscreen:"Fullscreen",hd:"Quality",liveBroadcast:"Live",logo:"Logo",mute:"Mute",next:"Next",nextUp:"Next Up",notLive:"Not Live",off:"Off",pause:"Pause",play:"Play",playback:"Play",playbackRates:"Playback Rates",player:"Video Player",poweredBy:"Powered by",prev:"Previous",related:{autoplaymessage:"Next up in xx",heading:"More Videos"},replay:"Replay",rewind:"Rewind 10 Seconds",settings:"Settings",sharing:{copied:"Copied",email:"Email",embed:"Embed",heading:"Share",link:"Link"},slider:"Seek",stop:"Stop",unmute:"Unmute",videoInfo:"About This Video",volume:"Volume",volumeSlider:"Volume",shortcuts:{playPause:"Play/Pause",volumeToggle:"Mute/Unmute",fullscreenToggle:"Fullscreen/Exit Fullscreen",seekPercent:"Seek %",keyboardShortcuts:"Keyboard Shortcuts",increaseVolume:"Increase Volume",decreaseVolume:"Decrease Volume",seekForward:"Seek Forward",seekBackward:"Seek Backward",spacebar:"SPACE",captionsToggle:"Captions On/Off"},captionsStyles:{subtitleSettings:"Subtitle Settings",color:"Font Color",fontOpacity:"Font Opacity",userFontScale:"Font Size",fontFamily:"Font Family",edgeStyle:"Character Edge",backgroundColor:"Background Color",backgroundOpacity:"Background Opacity",windowColor:"Window Color",windowOpacity:"Window Opacity",white:"White",black:"Black",red:"Red",green:"Green",blue:"Blue",yellow:"Yellow",magenta:"Magenta",cyan:"Cyan",none:"None",raised:"Raised",depressed:"Depressed",uniform:"Uniform",dropShadow:"Drop Shadow"},disabled:"Disabled",enabled:"Enabled",reset:"Reset"
+			}
+		}
+	});
+	$('#video-container-caption').html(videoCaption);
+}
+function pauseOthers(id) {
+    console.log('Playback just started for: '+id);
+    var videos = document.getElementsByTagName('video');
+    for (i=0;i<videos.length;i++) {
+        if (id != videos[i].parentNode.parentNode.id) {
+            jwplayer(videos[i].parentNode.parentNode.id).pause(true);
+            console.log('Pausing: '+videos[i].parentNode.parentNode.id);
+        }
+    }
+}
+//createPlayer("webcast-container", "images/webcast/default.jpg", "https://stmw.rthk.hk/vod/_definst_/special/olympics/countdown/smil:22/manifest.m3u8", "奧運倒數３２１");
+</script>
+
+<kanhanbypass>
+<!-- START OF SmartSource Data Collector TAG -->
+<script src="https://www.rthk.hk/js/webtrends.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var _tag=new WebTrends();
+_tag.dcsGetId();
+//]]>>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+// Add custom parameters here.
+//_tag.DCSext.param_name=param_value;
+_tag.dcsCollect();
+//]]>>
+</script>
+<noscript>
+<div><img alt="DCSIMG" id="DCSIMG" width="1" height="1" 
+src="//sdc.rthk.hk/dcseht10h000004r7f320gnyr_5q2e/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=8.6.2"/></div>
+</noscript>
+<!-- END OF SmartSource Data Collector TAG -->
+
+<!-- Snowplow starts plowing -->
+<script type="text/javascript">
+function getMetaContentByName(name,content){
+   var content = (content==null)?'content':content;
+   return document.querySelector("meta[name='"+name+"']").getAttribute(content);
+}
+var cg_n = getMetaContentByName("WT.cg_n");
+var cg_s = getMetaContentByName("WT.cg_s");
+
+;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
+p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+};p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
+n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","https://d1dns4zpgsd7rz.cloudfront.net/sp/rthk_sp_v3.9.js","snowplow"));
+
+window.snowplow('newTracker', 'cf', 'd1dns4zpgsd7rz.cloudfront.net', {
+	        platform:"web",
+	        eventMethod:"get"
+});
+window.snowplow('trackPageView');
+//window.snowplow('trackSocialInteraction', 'share', 'facebook');
+
+window.snowplow('trackSelfDescribingEvent', {
+    event: {
+           schema: 'rthk/grouping/jsonschema/2-0-0',
+           data: {
+                source: 'web',
+                cg_n: cg_n,
+                cg_s: cg_s
+           }
+    }
+});
+
+</script>
+<!-- Snowplow stops plowing -->
+
+</kanhanbypass>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</body>
+</html>
