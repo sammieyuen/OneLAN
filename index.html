@@ -2,20 +2,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="./@ad/web-sdk/style.css">
 </head>
 <body style="margin: 0; background-color: black;">
-<vindral-player id="vp"></vindral-player>
+			<div class="playerWrapper">
+				<iframe id="singleview" src="https://app2.rthk.hk/special/nationalgames/player/singleplayer.php?backendUrl=https://lb.mediatech-ssc.net&channelId=rthk_nationalgame1_ci_9d3a0f4b-4e8b-48fe-b3f6-a2dfb4b52f1e"></iframe>
+				<div id="buttonsMenu"></div>
+			</div>
 </body>
-<script type="module" src="rthkADModule.js"></script>
-<script>
-	setTimeout(()=>{ if(window.loaded) {
-			window.setTokenGenerationURL('https://rthkauthtoken.azurewebsites.net/getADTokens.php');
-			//window.setFullscreen(false); //Disable fullscreen button when the player is on app
-			//window.setPip(false); //Disable pip button when the player is on app
-			//window.init("https://lb.mediatech-ssc.net", "rthk_nationalgame1_ci_9d3a0f4b-4e8b-48fe-b3f6-a2dfb4b52f1e", true);
-			window.init("https://lb.mediatech-ssc.net", "rthk_nationalgame1_ci_9d3a0f4b-4e8b-48fe-b3f6-a2dfb4b52f1e", true);
-		}
-	}, 1000);
-</script>
 </html>
+
